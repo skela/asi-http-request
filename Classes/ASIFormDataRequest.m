@@ -228,7 +228,7 @@
 	CFRelease(uuid);
 	NSString *stringBoundary = [NSString stringWithFormat:@"0xKhTmLbOuNdArY-%@",uuidString];
 	
-	[self addRequestHeader:@"Content-Type" value:[NSString stringWithFormat:@"multipart/form-data; charset=%@; boundary=%@", charset, stringBoundary]];
+	[self addRequestHeader:@"Content-Type" value:[NSString stringWithFormat:@"multipart/form-data; charset=%@; boundary=\"%@\";",charset,stringBoundary]];
 	
 	[self appendPostString:[NSString stringWithFormat:@"--%@\r\n",stringBoundary]];
 	
