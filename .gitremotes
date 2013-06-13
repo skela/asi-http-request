@@ -1,0 +1,7 @@
+[remote "upstream"]
+	url = git://github.com/pokeb/asi-http-request.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+[branch "father"]
+	remote = upstream
+	merge = refs/heads/master
+	
